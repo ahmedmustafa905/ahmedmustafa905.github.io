@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Drone Detection Using Passive Radar | Ahmed Mustafa
+    </title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/project.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER / NAVIGATION
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container nav">
+
+            <a class="brand" href="../index.html">
+                AM<span>.</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                aria-label="Menu"
+            >
+                ☰
+            </button>
+
+            <nav class="nav-links">
+
+                <a href="../index.html#about">
+                    About
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#experience">
+                    Experience
+                </a>
+
+                <a href="../index.html#research">
+                    Research
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             PROJECT HERO
+             ================================================= -->
+
+        <section class="detail-hero">
+
+            <div class="container detail-hero-grid">
+
+
+                <!-- Project Introduction -->
+
+                <div>
+
+                    <a
+                        class="back-link"
+                        href="../index.html#projects"
+                    >
+                        ← Back to projects
+                    </a>
+
+                    <p class="eyebrow">
+                        Final Year Research Project · Radar & Signal Processing
+                    </p>
+
+                    <h1>
+                        Drone Detection Using Passive Radar
+                    </h1>
+
+                    <p class="detail-intro">
+                        A research project investigating passive radar
+                        techniques for detecting drones using
+                        software-defined radio and digital signal processing.
+                    </p>
+
+                    <p class="detail-role">
+                        <strong>Role:</strong>
+                        Final Year Project Researcher
+                    </p>
+
+                </div>
+
+
+                <!-- Project Main Image -->
+
+                <div class="detail-image">
+
+    <img
+        src="../assets/transmitter_setup.png"
+        alt="Passive radar system setup"
+    >
+
+</div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESEARCH QUESTION
+             ================================================= -->
+
+        <section class="detail-section">
+
+            <p class="section-kicker">
+                RESEARCH QUESTION
+            </p>
+
+            <div class="detail-text">
+
+                <p style="font-size: 20px;">
+                    The project explored how passive radar can exploit
+                    existing radio-frequency illuminators rather than
+                    requiring a dedicated radar transmitter. The focus
+                    was drone detection through reflected signals and
+                    signal-processing techniques.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HARDWARE
+             ================================================= -->
+
+       <section class="detail-section">
+
+    <p class="section-kicker">
+        HARDWARE WE USED
+    </p>
+
+    <div class="detail-text">
+
+        <p style="font-size: 20px;">
+            ADALM-Pluto and Pluto+ were used as software-defined radio 
+            devices in the experimental transmitter/receiver arrangement 
+            and signal-acquisition workflow. Two Yagi-Uda antennas were 
+            used on the receiver side for directional signal reception, 
+            while a helical antenna was used on the transmitter side to 
+            provide circular polarization for the transmitted signal.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+      <!-- =================================================
+     SIGNAL PROCESSING
+     ================================================= -->
+
+<section class="detail-section">
+
+    <p class="section-kicker">
+        SIGNAL PROCESSING
+    </p>
+
+    <div class="detail-text">
+
+        <p style="font-size: 20px;">
+            MATLAB was used to configure and control the ADALM-Pluto on 
+            the transmitter side, while a Python-based pipeline handled 
+            the Pluto+ on the receiver side for IQ data acquisition, 
+            preprocessing, and digital signal processing relevant to 
+            passive radar, including cross-ambiguity function computation, 
+            FFT-based spectral analysis, and range-Doppler visualization.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =================================================
+     SIGNAL PROCESSING
+     ================================================= -->
+<!-- =================================================
+     SIGNAL PROCESSING
+     ================================================= -->
+
+<section class="detail-section">
+
+    <p class="section-kicker">
+        SIGNAL PROCESSING
+    </p>
+
+    <div class="detail-text" style="font-size: 17px; line-height: 1.7;">
+
+        <ul>
+            <li>
+                Generated a linear FM (LFM) chirp waveform with 
+                <b>15 MHz</b> bandwidth centered at <b>2.9 GHz</b> in 
+                MATLAB, transmitted continuously via ADALM-Pluto with a 
+                <b>1 ms</b> pulse duration, corresponding to a pulse 
+                repetition frequency (PRF) of <b>1 kHz</b>.
+            </li>
+
+            <li>
+                Acquired dual-channel IQ data at a <b>30 MHz</b> sample 
+                rate on Pluto+ using a Python pipeline, with receiver 
+                gain configured asymmetrically at <b>30 dB</b> on the 
+                reference channel and <b>40 dB</b> on the surveillance 
+                channel to compensate for the weaker reflected signal 
+                path, over processing frames of <b>256 chirps</b>.
+            </li>
+
+            <li>
+                Performed dechirp (stretch) processing by mixing the 
+                surveillance channel with the conjugate of the reference 
+                channel, applying Hanning windowing in both fast-time 
+                (range) and slow-time (Doppler) domains to suppress 
+                spectral sidelobes before forming the range-Doppler map.
+            </li>
+
+            <li>
+                Achieved a range resolution of <b>10 m</b> and a Doppler 
+                resolution of <b>≈3.9 Hz</b> (≈<b>0.2 m/s</b> velocity 
+                resolution), with a maximum unambiguous velocity of 
+                approximately <b>25.9 m/s (≈93 km/h)</b> at the 2.9 GHz 
+                carrier frequency.
+            </li>
+
+            <li>
+                Displayed live, normalized range-Doppler maps (<b>-80 
+                to 0 dB</b> dynamic range) over a <b>500 m</b> range 
+                window, alongside time-domain, spectrum, and max-hold 
+                profile visualizations for real-time target monitoring.
+            </li>
+        </ul>
+
+    </div>
+
+</section>        <!-- =================================================
+             RESEARCH DIRECTION
+             ================================================= -->
+
+        <section class="detail-section">
+
+            <p class="section-kicker">
+                RESEARCH DIRECTION
+            </p>
+
+            <div class="detail-text">
+
+                <p>
+                    The project connected RF hardware, signal processing
+                    and an applied detection problem, strengthening my
+                    interest in radar, sensing and autonomous systems.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+      <!-- =================================================
+     RESULTS
+     ================================================= -->
+
+<section class="detail-section">
+
+    <div class="evidence-item">
+
+                    <h3>
+                        RESULTS
+                    </h3>
+
+                    <p class="muted">
+                        Complete results, including range-Doppler detection outcomes, 
+            system testing, and final evaluation, are presented in our 
+            Final Year Project presentation below.
+                    </p>
+
+                    <a
+                        class="btn btn-dark"
+                        href="../assets/passive_radar.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Project Results →
+                    </a>
+
+                </div>
+
+</section>
+
+        <!-- =================================================
+             RETURN TO PROJECTS
+             ================================================= -->
+
+        <section class="detail-footer">
+
+            <div class="container">
+
+                <a
+                    class="arrow-link"
+                    href="../index.html#projects"
+                >
+                    ← Return to selected projects
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+
+            <div>
+
+                <a
+                    class="brand footer-brand"
+                    href="../index.html"
+                >
+                    AM<span>.</span>
+                </a>
+
+                <p>
+                    Academic portfolio · Electrical & Electronics Engineering
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Ahmed Mustafa · 2026
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
