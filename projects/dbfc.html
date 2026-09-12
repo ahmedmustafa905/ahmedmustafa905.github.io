@@ -13,10 +13,6 @@
 
 <body>
 
-    <!-- =====================================================
-         HEADER / NAVIGATION
-         ===================================================== -->
-
     <header class="site-header">
 
         <div class="container nav">
@@ -27,12 +23,12 @@
 
             <button
                 class="menu-toggle"
-                aria-label="Menu"
+                aria-label="Menu" aria-expanded="false" aria-controls="site-navigation"
             >
                 ☰
             </button>
 
-            <nav class="nav-links">
+            <nav class="nav-links" id="site-navigation" aria-label="Main navigation">
 
                 <a href="../index.html#about">
                     About
@@ -56,24 +52,11 @@
 
     </header>
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
     <main>
-
-
-        <!-- =================================================
-             PROJECT HERO
-             ================================================= -->
 
         <section class="detail-hero">
 
             <div class="container detail-hero-grid">
-
-
-                <!-- Project Information -->
 
                 <div>
 
@@ -100,9 +83,6 @@
                         operations.
                     </p>
 
-
-                    <!-- Leadership Highlight -->
-
                     <div class="leadership-highlight">
 
                         <p class="leadership-label">
@@ -113,19 +93,11 @@
                             Team Captain — Team NIMBUS
                         </p>
 
-                        <p class="leadership-description">
-                            Led the team throughout the Design Build
-                            Fly Competition, coordinating technical
-                            work, preparation, engineering decisions,
-                            and competition activities.
-                        </p>
+                        <p class="leadership-description">I coordinated Team NIMBUS during aircraft development, preparation, and competition activities.</p>
 
                     </div>
 
                 </div>
-
-
-                <!-- Project Aircraft Photograph -->
 
                 <div class="detail-image">
 
@@ -139,11 +111,6 @@
             </div>
 
         </section>
-
-
-        <!-- =================================================
-             COMPETITION
-             ================================================= -->
 
         <section class="detail-section">
 
@@ -168,33 +135,19 @@
 
         </section>
 
-
-        <!-- =================================================
-             ENGINEERING WORK
-             ================================================= -->
-
         <section class="detail-section">
 
-            <p class="section-kicker">
+            <h2 class="section-kicker">
                 ENGINEERING WORK
-            </p>
+            </h2>
 
             <div class="detail-text">
 
-                <p>
-                    The work involved translating competition
-                    requirements into an aircraft concept,
-                    coordinating team tasks, preparing the aircraft
-                    for testing, and dealing with practical build
-                    and flight constraints.
-                </p>
-
-
-                <!-- Aircraft Front Photograph -->
+                <p>We translated competition requirements into an aircraft concept, prepared the build, and worked through practical testing and flight constraints.</p>
 
                 <div class="dbfc-engineering-image">
 
-                    <img
+                    <img class="dbfc-aircraft-image"
                         src="../assets/Front.jpeg"
                         alt="Front view of Team NIMBUS fixed-wing aircraft"
                     >
@@ -210,11 +163,6 @@
 
         </section>
 
-
-        <!-- =================================================
-             LEADERSHIP
-             ================================================= -->
-
         <section class="detail-section">
 
             <p class="section-kicker">
@@ -224,39 +172,22 @@
             <div class="detail-text">
 
                 <h2 class="detail-heading">
-                    Team Leadership & Competition Execution
+                    My contribution
                 </h2>
 
-                <p>
-                    As Team Captain, I coordinated the team and
-                    helped drive technical decisions, preparation,
-                    testing, and competition execution. This role
-                    required balancing engineering requirements
-                    with practical constraints during the aircraft
-                    development process.
-                </p>
+                <p>I coordinated team tasks and contributed to technical decisions, preparation, and testing. This role required balancing the aircraft’s design requirements with the time and resources available.</p>
 
             </div>
 
         </section>
 
-
-        <!-- =================================================
-             EVIDENCE
-             ================================================= -->
-
         <section class="detail-section">
 
-            <p class="section-kicker">
+            <h2 class="section-kicker">
                 EVIDENCE
-            </p>
+            </h2>
 
             <div class="evidence-gallery">
-
-
-                <!-- =============================================
-                     01. CERTIFICATION
-                     ============================================= -->
 
                 <div class="evidence-item">
 
@@ -280,63 +211,23 @@
 
                 </div>
 
-
-               
-
-                <!-- =============================================
-                     03. FINAL DESIGN & LESSONS LEARNED
-                     ============================================= -->
-
                 <div class="evidence-item">
 
                     <h3>
                         Final Design & Lessons Learned
                     </h3>
 
-<p style="font-size: 1.5rem; line-height: 1.8;">
-    During this competition, I gained practical experience in the
-    aerodynamic and structural design of a fixed-wing aircraft,
-    applying engineering principles to translate theoretical concepts
-    into a functional aircraft configuration. The work involved
-    analyzing the aircraft's aerodynamic performance, including lift,
-    drag, pressure distribution, airflow behavior, and the relationship
-    between thrust, airspeed, and takeoff requirements.
-</p>
+<p>The project gave me practical experience in fixed-wing aerodynamic and structural design. I worked with the relationships between lift, drag, thrust, airspeed, and takeoff requirements.</p>
 
-<p style="font-size: 1.5rem; line-height: 1.8;">
-    I conducted Computational Fluid Dynamics (CFD) analysis to
-    investigate airflow around the aircraft and evaluate key
-    aerodynamic characteristics. In parallel, Finite Element Analysis
-    (FEA) was performed to assess structural integrity, stress
-    distribution, deformation, and the ability of the airframe to
-    withstand the expected aerodynamic and operational loads. These
-    analyses provided an engineering basis for refining the aircraft
-    geometry and structural design before fabrication.
-</p>
+<p>I used CFD analysis to examine airflow around the aircraft. The project also included finite element analysis of structural loading and deformation to inform design decisions before fabrication.</p>
 
-<p style="font-size: 1.5rem; line-height: 1.8;">
-    The project also strengthened my understanding of aircraft
-    stability and control through the design and analysis of primary
-    control surfaces, including ailerons and elevators. Overall, the
-    competition provided hands-on exposure to the multidisciplinary
-    aircraft design process, integrating aerodynamics, structural
-    analysis, propulsion, stability, control, and engineering
-    validation into a complete fixed-wing aircraft system.
-</p>
-```
-
+<p>Working on control surfaces, including ailerons and elevators, strengthened my understanding of aircraft stability and control. The experience connected analysis with the practical demands of building and testing an aircraft.</p>
 
                 </div>
-
 
             </div>
 
         </section>
-
-
-        <!-- =================================================
-             RETURN TO PROJECTS
-             ================================================= -->
 
         <section class="detail-footer">
 
@@ -355,15 +246,9 @@
 
     </main>
 
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
     <footer>
 
         <div class="container footer-grid">
-
 
             <div>
 
@@ -381,7 +266,6 @@
 
             </div>
 
-
             <div>
 
                 <p>
@@ -390,15 +274,9 @@
 
             </div>
 
-
         </div>
 
     </footer>
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
 
     <script src="../script.js"></script>
 

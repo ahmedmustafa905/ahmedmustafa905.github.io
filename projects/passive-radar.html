@@ -19,12 +19,7 @@
 
 </head>
 
-
 <body>
-
-    <!-- =====================================================
-         HEADER / NAVIGATION
-         ===================================================== -->
 
     <header class="site-header">
 
@@ -36,12 +31,12 @@
 
             <button
                 class="menu-toggle"
-                aria-label="Menu"
+                aria-label="Menu" aria-expanded="false" aria-controls="site-navigation"
             >
                 ☰
             </button>
 
-            <nav class="nav-links">
+            <nav class="nav-links" id="site-navigation" aria-label="Main navigation">
 
                 <a href="../index.html#about">
                     About
@@ -65,24 +60,11 @@
 
     </header>
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
     <main>
-
-
-        <!-- =================================================
-             PROJECT HERO
-             ================================================= -->
 
         <section class="detail-hero">
 
             <div class="container detail-hero-grid">
-
-
-                <!-- Project Introduction -->
 
                 <div>
 
@@ -101,181 +83,93 @@
                         Drone Detection Using Passive Radar
                     </h1>
 
-                    <p class="detail-intro">
-                        A research project investigating passive radar
-                        techniques for detecting drones using
-                        software-defined radio and digital signal processing.
-                    </p>
+                    <p class="detail-intro">My final-year project explored radar-based drone detection using software-defined radio and digital signal processing. The work brought together RF hardware, signal acquisition, and range-Doppler processing.</p>
 
                     <p class="detail-role">
-                        <strong>Role:</strong>
+                        Role:
                         Final Year Project Researcher
                     </p>
 
                 </div>
 
-
-                <!-- Project Main Image -->
-
                 <div class="detail-image">
 
     <img
         src="../assets/transmitter_setup.png"
-        alt="Passive radar system setup"
+        alt="Experimental radar transmitter setup"
     >
 
 </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             RESEARCH QUESTION
-             ================================================= -->
+</div>
+</section>
 
         <section class="detail-section">
 
-            <p class="section-kicker">
+            <h2 class="section-kicker">
                 RESEARCH QUESTION
-            </p>
+            </h2>
 
             <div class="detail-text">
 
-                <p style="font-size: 20px;">
-                    The project explored how passive radar can exploit
-                    existing radio-frequency illuminators rather than
-                    requiring a dedicated radar transmitter. The focus
-                    was drone detection through reflected signals and
-                    signal-processing techniques.
-                </p>
+                <p>The project investigated how reflected radio signals could support drone detection. Its research interest was passive radar; the experimental arrangement described here used an ADALM-Pluto transmitter and a Pluto+ receiver to study signal acquisition and processing.</p>
 
             </div>
 
         </section>
 
-
-
-        <!-- =================================================
-             HARDWARE
-             ================================================= -->
-
        <section class="detail-section">
 
-    <p class="section-kicker">
-        HARDWARE WE USED
-    </p>
+    <h2 class="section-kicker">
+        EXPERIMENTAL SETUP
+    </h2>
 
     <div class="detail-text">
 
-        <p style="font-size: 20px;">
-            ADALM-Pluto and Pluto+ were used as software-defined radio 
-            devices in the experimental transmitter/receiver arrangement 
-            and signal-acquisition workflow. Two Yagi-Uda antennas were 
-            used on the receiver side for directional signal reception, 
-            while a helical antenna was used on the transmitter side to 
-            provide circular polarization for the transmitted signal.
-        </p>
+        <p>The experimental setup used ADALM-Pluto for transmission and Pluto+ for signal acquisition. Two Yagi-Uda antennas served the receiver channels, while a helical antenna was used on the transmitter side.</p>
 
     </div>
 
 </section>
 
-
-
-      <!-- =================================================
-     SIGNAL PROCESSING
-     ================================================= -->
-
 <section class="detail-section">
 
-    <p class="section-kicker">
-        SIGNAL PROCESSING
-    </p>
+    <h2 class="section-kicker">PROCESSING APPROACH</h2>
 
     <div class="detail-text">
 
-        <p style="font-size: 20px;">
-            MATLAB was used to configure and control the ADALM-Pluto on 
-            the transmitter side, while a Python-based pipeline handled 
-            the Pluto+ on the receiver side for IQ data acquisition, 
-            preprocessing, and digital signal processing relevant to 
-            passive radar, including cross-ambiguity function computation, 
-            FFT-based spectral analysis, and range-Doppler visualization.
-        </p>
+        <p>MATLAB configured the transmitter and generated the waveform. A Python pipeline handled receiver IQ data acquisition, preprocessing, and visualization. The work covered FFT-based analysis, cross-ambiguity processing, and range-Doppler representations.</p>
 
     </div>
 
 </section>
 
-<!-- =================================================
-     SIGNAL PROCESSING
-     ================================================= -->
-<!-- =================================================
-     SIGNAL PROCESSING
-     ================================================= -->
-
 <section class="detail-section">
 
-    <p class="section-kicker">
-        SIGNAL PROCESSING
-    </p>
+    <h2 class="section-kicker">IMPLEMENTATION NOTES</h2>
 
-    <div class="detail-text" style="font-size: 17px; line-height: 1.7;">
+    <div class="detail-text">
 
         <ul>
-            <li>
-                Generated a linear FM (LFM) chirp waveform with 
-                <b>15 MHz</b> bandwidth centered at <b>2.9 GHz</b> in 
-                MATLAB, transmitted continuously via ADALM-Pluto with a 
-                <b>1 ms</b> pulse duration, corresponding to a pulse 
-                repetition frequency (PRF) of <b>1 kHz</b>.
-            </li>
+            <li>Generated an LFM chirp in MATLAB and transmitted it with ADALM-Pluto. The project configuration used a 15 MHz bandwidth and a 2.9 GHz carrier.</li>
 
-            <li>
-                Acquired dual-channel IQ data at a <b>30 MHz</b> sample 
-                rate on Pluto+ using a Python pipeline, with receiver 
-                gain configured asymmetrically at <b>30 dB</b> on the 
-                reference channel and <b>40 dB</b> on the surveillance 
-                channel to compensate for the weaker reflected signal 
-                path, over processing frames of <b>256 chirps</b>.
-            </li>
+            <li>Acquired reference and surveillance IQ data on Pluto+ through a Python pipeline, with separate receiver-gain settings for the two channels.</li>
 
-            <li>
-                Performed dechirp (stretch) processing by mixing the 
-                surveillance channel with the conjugate of the reference 
-                channel, applying Hanning windowing in both fast-time 
-                (range) and slow-time (Doppler) domains to suppress 
-                spectral sidelobes before forming the range-Doppler map.
-            </li>
+            <li>Applied dechirp processing using the reference and surveillance channels, followed by windowing and range-Doppler processing.</li>
 
-            <li>
-                Achieved a range resolution of <b>10 m</b> and a Doppler 
-                resolution of <b>≈3.9 Hz</b> (≈<b>0.2 m/s</b> velocity 
-                resolution), with a maximum unambiguous velocity of 
-                approximately <b>25.9 m/s (≈93 km/h)</b> at the 2.9 GHz 
-                carrier frequency.
-            </li>
+            <li>Examined range and Doppler resolution in relation to waveform bandwidth and processing duration. These configuration-dependent quantities should be distinguished from measured drone-detection performance.</li>
 
-            <li>
-                Displayed live, normalized range-Doppler maps (<b>-80 
-                to 0 dB</b> dynamic range) over a <b>500 m</b> range 
-                window, alongside time-domain, spectrum, and max-hold 
-                profile visualizations for real-time target monitoring.
-            </li>
+            <li>Visualized normalized range-Doppler maps alongside time-domain and spectral views. A displayed range window describes the visualization extent, rather than a verified detection distance.</li>
         </ul>
 
     </div>
 
-</section>        <!-- =================================================
-             RESEARCH DIRECTION
-             ================================================= -->
+</section>        
 
         <section class="detail-section">
 
-            <p class="section-kicker">
+            <h2 class="section-kicker">
                 RESEARCH DIRECTION
-            </p>
+            </h2>
 
             <div class="detail-text">
 
@@ -289,25 +183,13 @@
 
         </section>
 
-
-
-      <!-- =================================================
-     RESULTS
-     ================================================= -->
-
 <section class="detail-section">
 
     <div class="evidence-item">
 
-                    <h3>
-                        RESULTS
-                    </h3>
+                    <h2 class="detail-heading">Project presentation</h2>
 
-                    <p class="muted">
-                        Complete results, including range-Doppler detection outcomes, 
-            system testing, and final evaluation, are presented in our 
-            Final Year Project presentation below.
-                    </p>
+                    <p class="muted">Our final-year project presentation provides the supporting material for the setup, processing workflow, and project results.</p>
 
                     <a
                         class="btn btn-dark"
@@ -315,16 +197,12 @@
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        View Project Results →
+                        View project presentation →
                     </a>
 
                 </div>
 
 </section>
-
-        <!-- =================================================
-             RETURN TO PROJECTS
-             ================================================= -->
 
         <section class="detail-footer">
 
@@ -343,16 +221,9 @@
 
     </main>
 
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
     <footer>
 
         <div class="container footer-grid">
-
 
             <div>
 
@@ -369,7 +240,6 @@
 
             </div>
 
-
             <div>
 
                 <p>
@@ -378,15 +248,9 @@
 
             </div>
 
-
         </div>
 
     </footer>
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
 
     <script src="../script.js"></script>
 

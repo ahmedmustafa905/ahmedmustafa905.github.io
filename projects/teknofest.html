@@ -13,10 +13,6 @@
 
 <body>
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
     <header class="site-header">
 
         <div class="container nav">
@@ -25,11 +21,11 @@
                 AM<span>.</span>
             </a>
 
-            <button class="menu-toggle" aria-label="Menu">
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-navigation">
                 ☰
             </button>
 
-            <nav class="nav-links">
+            <nav class="nav-links" id="site-navigation" aria-label="Main navigation">
 
                 <a href="../index.html#about">
                     About
@@ -53,23 +49,11 @@
 
     </header>
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
     <main>
-
-
-        <!-- =================================================
-             PROJECT HERO
-             ================================================= -->
 
         <section class="detail-hero">
 
             <div class="container detail-hero-grid">
-
-                <!-- Project Introduction -->
 
                 <div>
 
@@ -95,8 +79,6 @@
                         UAV Competition in Türkiye.
                     </p>
 
-                    <!-- Leadership Highlight -->
-
                     <div class="leadership-highlight">
 
                         <p class="leadership-label" >
@@ -107,19 +89,11 @@
                             Team Captain — Team MACH-X
                         </p>
 
-                        <p class="leadership-description">
-                            Led an eight-member team representing Pakistan
-                            and the Pakistan Institute of Engineering and
-                            Applied Sciences (PIEAS) at an international
-                            aerospace competition.
-                        </p>
+                        <p class="leadership-description">I led an eight-member PIEAS team in the TEKNOFEST 2025 Rotary-Wing UAV Competition in Türkiye.</p>
 
                     </div>
 
                 </div>
-
-
-                <!-- Project Photograph -->
 
                 <div class="detail-image">
 
@@ -134,10 +108,17 @@
 
         </section>
 
+        <section class="detail-section">
 
-        <!-- =================================================
-             LEADERSHIP
-             ================================================= -->
+            <h2 class="section-kicker">
+    PROJECT SUMMARY
+</h2>
+
+<div class="detail-text">
+    <p>Team MACH-X developed a quadcopter for an autonomous flight and payload-delivery mission at TEKNOFEST 2025. The project combined airframe development, flight control, telemetry, onboard vision, and a payload-release mechanism.</p>
+</div>
+
+        </section>
 
         <section class="detail-section">
 
@@ -148,119 +129,45 @@
             <div class="detail-text">
 
                 <h2 class="detail-heading">
-                    Team Leadership & Competition Execution
+                    My contribution
                 </h2>
 
-                <p style="font-size: 28px;">
-    As Team Captain, I coordinated the technical work
-    of an eight-member team, supported engineering
-    decisions, managed mission preparation, and
-    represented the team during the international
-    competition.
-</p>
+                <p>I coordinated technical work, supported integration decisions, and organized mission preparation and competition activities. The aircraft and its subsystems were developed as a team effort.</p>
 
             </div>
 
         </section>
 
-
-        <!-- =================================================
-             PROJECT OVERVIEW
-             ================================================= -->
-
         <section class="detail-section">
 
-            <p class="section-kicker">
-    PROJECT SUMMARY
-</p>
-
-<div class="detail-text">
-    <p style="font-size: 28px;">
-        Team MACH-X represented Pakistan and PIEAS at the international 
-        TEKNOFEST 2025 Rotary-Wing UAV Competition. We designed and developed 
-        a quadcopter capable of carrying a <strong>600–800g</strong> payload and autonomously 
-        dropping it at a designated location using image-based vision 
-        processing. As Team Captain, I led the team while contributing to 
-        technical integration, mission planning, testing, and competition 
-        execution.
-    </p>
-</div>
-
-        </section>
-
-
-        <!-- =================================================
-             SYSTEM
-             ================================================= -->
-
-        <section class="detail-section">
-
-            <p class="section-kicker">
-    SYSTEM AND MISSION WORK
-</p>
+            <h2 class="section-kicker">
+    SYSTEM DEVELOPMENT
+</h2>
 
 <div class="detail-text">
 
-    <ul style="font-size: 28px;">
-        <li>
-            Airframe designed in SolidWorks and validated through 
-            computational fluid dynamics (CFD) analysis, optimizing 
-            aerodynamic efficiency, rotor-airflow interaction, and 
-            structural load distribution across a 500mm diagonal frame 
-            prior to fabrication.
-        </li>
+    <ul>
+        <li>Developed the airframe in SolidWorks and used CFD analysis to examine airflow as part of the design process.</li>
 
-        <li>
-            Frame manufactured from carbon fiber composite, achieving a 
-            total takeoff weight of 2kg with a strength-to-weight ratio 
-            suited for dynamic flight loads under competition payload 
-            requirements.
-        </li>
+        <li>Built a carbon-fiber frame and integrated the propulsion, avionics, and payload subsystems.</li>
 
-        <li>
-            Flight control managed by a Pixhawk 2.4.8 running ArduPilot 
-            firmware, interfaced with 2.4GHz MAVLink telemetry for 
-            real-time state monitoring and command exchange with Mission 
-            Planner and QGroundControl ground control stations.
-        </li>
+        <li>Used a Pixhawk 2.4.8 with ArduPilot for flight control, MAVLink telemetry, and Mission Planner and QGroundControl for ground-station work.</li>
 
-        <li>
-            Executed an autonomous flight performing an infinity-loop 
-            trajectory at 30m altitude over a 2km range, demonstrating 
-            flight stability and maneuverability under autonomous control.
-        </li>
+        <li>Worked on an autonomous flight mission involving an infinity-loop trajectory, with attention to mission planning and flight behavior.</li>
 
-        <li>
-            Conducted a second autonomous flight for payload delivery, 
-            carrying a 600–800g payload: a Raspberry Pi paired with a 
-            16MP autofocus camera performed onboard image acquisition 
-            and target detection with over 80% accuracy, triggering a 
-            servo-driven payload release mechanism to deliver the payload 
-            within 10m of the target.
-        </li>
+        <li>Worked on a payload-delivery mission using a Raspberry Pi, onboard camera, image-based target detection, and a servo-driven release mechanism.</li>
     </ul>
 
 </div>
         </section>
 
-
-
-        <!-- =================================================
-             EVIDENCE
-             ================================================= -->
-
         <section class="detail-section">
 
-            <p class="section-kicker">
+            <h2 class="section-kicker">
                 EVIDENCE
-            </p>
+            </h2>
 
             <div class="evidence-gallery">
-
-
-                <!-- =================================================
-                     01. UAV & TEAM PHOTOGRAPHS
-                     ================================================= -->
 
                 <div class="evidence-item">
 
@@ -284,11 +191,6 @@
 
                 </div>
 
-
-                <!-- =================================================
-                     02. COMPETITION CERTIFICATE
-                     ================================================= -->
-
                 <div class="evidence-item">
 
                     <h3>
@@ -311,37 +213,17 @@
 
                 </div>
 
-
-                <!-- =================================================
-                     03. CAD / UAV DESIGN
-                     ================================================= -->
-
                 <div class="evidence-item">
 
                     <h3>
                         CAD / UAV Design
                     </h3>
 
-                    <p class="muted">
-                        CAD models and structural design developed
-                        for the competition UAV.
-                    </p>
+                    <p class="muted">See the competition report for the project’s design documentation.</p>
 
-                    <div class="evidence-image">
-
-                        <img
-                            src="../assets/uav-cad.jpg"
-                            alt="CAD design of Team MACH-X Rotary-Wing UAV"
-                        >
-
-                    </div>
+                    <a class="arrow-link" href="../assets/Report_for_teknofest.pdf" target="_blank" rel="noopener noreferrer">See design documentation in the report →</a>
 
                 </div>
-
-
-                <!-- =================================================
-                     04. COMPETITION REPORT
-                     ================================================= -->
 
                 <div class="evidence-item">
 
@@ -366,25 +248,13 @@
 
                 </div>
 
-
-                <!-- =================================================
-                     05. RESULTS & QUALIFICATION
-                     ================================================= -->
-
                 <div class="evidence-item">
 
                     <h3>
                         Results & Qualification
                     </h3>
 
-                    <p class="muted">
-                        <strong>Team Finalist Certificate</strong>
-                        <br>
-                        The team successfully qualified as a finalist
-                        among more than 70 teams globally, providing
-                        official evidence of our qualification for the
-                        competition.
-                    </p>
+                    <p class="muted">Team MACH-X qualified as a finalist. The certificate below documents the team’s qualification.</p>
 
                     <div class="evidence-image">
 
@@ -397,15 +267,9 @@
 
                 </div>
 
-
             </div>
 
         </section>
-
-
-        <!-- =================================================
-             PROJECT FOOTER
-             ================================================= -->
 
         <section class="detail-footer">
 
@@ -423,11 +287,6 @@
         </section>
 
     </main>
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
 
     <footer>
 
@@ -460,11 +319,6 @@
         </div>
 
     </footer>
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
 
     <script src="../script.js"></script>
 
