@@ -137,7 +137,7 @@
 
     <div class="detail-text">
 
-        <p>MATLAB configured the transmitter and generated the waveform. A Python pipeline handled receiver IQ data acquisition, preprocessing, and visualization. The work covered FFT-based analysis, cross-ambiguity processing, and range-Doppler representations.</p>
+        <p>Generated waveforms with MATLAB and acquired synchronized reference and surveillance IQ data through Pluto+ using Python and pyadi-iio. The DSP pipeline included DC-offset removal, Hann windowing, adaptive LMS interference cancellation, and two-dimensional cross-ambiguity processing.</p>
 
     </div>
 
@@ -154,11 +154,11 @@
 
             <li>Acquired reference and surveillance IQ data on Pluto+ through a Python pipeline, with separate receiver-gain settings for the two channels.</li>
 
-            <li>Applied dechirp processing using the reference and surveillance channels, followed by windowing and range-Doppler processing.</li>
+            <li>Implemented adaptive LMS filtering to suppress direct-path interference before computing cross-ambiguity and range-Doppler representations.</li>
 
-            <li>Examined range and Doppler resolution in relation to waveform bandwidth and processing duration. These configuration-dependent quantities should be distinguished from measured drone-detection performance.</li>
+            <li>Studied target detection in a one-transmitter/one-receiver simulation and two-dimensional localization in a two-transmitter/one-receiver configuration.</li>
 
-            <li>Visualized normalized range-Doppler maps alongside time-domain and spectral views. A displayed range window describes the visualization extent, rather than a verified detection distance.</li>
+            <li>Conducted hardware experiments with reference and surveillance channels to investigate UAV detection. Simulation results and experimental observations were assessed separately.</li>
         </ul>
 
     </div>
@@ -173,11 +173,7 @@
 
             <div class="detail-text">
 
-                <p>
-                    The project connected RF hardware, signal processing
-                    and an applied detection problem, strengthening my
-                    interest in radar, sensing and autonomous systems.
-                </p>
+                <p>The project strengthened my interest in radar-based drone detection, interference suppression, and target localization.</p>
 
             </div>
 
