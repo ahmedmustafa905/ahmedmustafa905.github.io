@@ -1,0 +1,97 @@
+/* A richer presentation of the existing navy, teal and editorial typography. */
+.portfolio-home { --accent-gold: #a66b20; background: #fbfcfb; }
+.portfolio-home .site-header { background: rgba(251,252,251,.97); border-bottom-color: #cfdfdf; box-shadow: 0 4px 25px #102c4308; }
+.portfolio-home .nav { min-height: 82px; }
+.portfolio-home .nav-links { gap: 5px; }
+.portfolio-home .nav-links a { padding: 10px 13px; border: 0; border-radius: 6px; font-size: 14px; transition: background .2s, color .2s; }
+.portfolio-home .nav-links a:hover { background: #e6f1ed; color: #155d57; }
+.portfolio-home .nav-links a[aria-current] { color: #fff; background: var(--navy); }
+.portfolio-home .hero { position: relative; isolation: isolate; gap: 48px; min-height: 760px; padding-top: 55px; padding-bottom: 70px; }
+.portfolio-home .hero::before { content: ''; position: absolute; z-index: -1; inset: 0 calc((1180px - 100vw) / 2); background: radial-gradient(ellipse at 85% 30%, #cbe6df 0, transparent 48%), radial-gradient(ellipse at 15% 0%, #e3ebf2 0, transparent 60%), linear-gradient(130deg,#f8fbfc,#f4f9f5); pointer-events: none; }
+.achievement-badge { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 12px 16px; margin-bottom: 26px; border: 1px solid #b7d6cb; border-radius: 9px; background: #ffffffdf; color: #145e55; font-size: 13px; font-weight: 600; box-shadow: 0 8px 26px #1e7b730a; }
+.badge-dot { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: #267869; }
+.badge-support { display: block; flex-basis: 100%; margin-left: 15px; color: #65766b; font-size: 12px; font-weight: 400; }
+.portfolio-home .hero .eyebrow { font-size: 11px; letter-spacing: 1.5px; }
+.portfolio-home .hero h1 { font-size: clamp(68px,8vw,108px); margin-top: 16px; }
+.portfolio-home .hero-lead { font-size: 18px; max-width: 53ch; line-height: 1.75; color: #435b6a; }
+.portfolio-home .hero-meta { display: grid; gap: 4px; letter-spacing: .2px; text-transform: none; font-size: 13px; color: #526b70; }
+.portfolio-home .hero-frame { padding: 16px; background: #fff; transform: rotate(-2deg); box-shadow: 0 30px 70px #143c4926; border-color: #bed6d0; }
+.portfolio-home .hero-frame img { min-width: 230px; }
+.portfolio-home .orbit-a { border-color: #8fbdb2; }
+.portfolio-home .orbit-b { border-color: #9bb5cb; }
+.hero-credential { position: absolute; bottom: 12px; left: 12%; right: 0; background: var(--navy); border-left: 4px solid #d7b579; color: white; padding: 19px 23px; z-index: 3; box-shadow: 0 15px 40px #102c4321; border-radius: 5px; }
+.hero-credential > span { font-size: 10px; letter-spacing: 1.8px; color: #a7d2c8; }
+.hero-credential p { font-size: 20px; margin-top: 5px; }
+.hero-credential small { font-size: 12px; color: #cfdddd; }
+.portfolio-home .btn-dark { background: #163c52; border-color: #163c52; box-shadow: 0 5px 14px #102c4314; }
+.recognition-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; margin-top: 0; margin-bottom: 64px; background: #fff; border: 1px solid #cfdfdb; border-radius: 10px; overflow: hidden; box-shadow: 0 15px 35px #102c4308; }
+.recognition-card { display: block; padding: 28px; border-right: 1px solid #dce7e3; transition: background .2s; }
+.recognition-card:last-child { border: 0; }
+.recognition-card:hover { background: #f0f7f3; }
+.recognition-label { font-size: 10px; letter-spacing: 1.5px; color: #567970; }
+.recognition-card h2 { font-size: 25px; font-weight: 500; margin: 12px 0 8px; color: var(--navy); line-height: 1.2; }
+.recognition-card p { font-size: 14px; color: #5b7078; line-height: 1.6; }
+.recognition-link { display: block; margin-top: 18px; font-size: 12px; color: var(--teal); }
+.portfolio-home .intro-strip { background: #173d50; color: #f4f8f6; border: 0; }
+.portfolio-home .intro-strip .section-kicker { color: #99cabc; }
+.portfolio-home .intro-strip .statement { color: #ecf3f2; font-size: 23px; }
+.portfolio-home .intro-strip .arrow-link { color: #aadace; }
+.portfolio-home .section-head > .section-kicker { display: flex; align-items: center; gap: 13px; }
+.portfolio-home .section-head > .section-kicker::before { content: ''; width: 28px; height: 2px; background: #b4884c; flex-shrink: 0; }
+.portfolio-home .section-head h2 { margin-top: 16px; }
+.portfolio-home .quote-card { background: linear-gradient(145deg,#e5f1e9,#eef5f3); border-top: 3px solid #b98c50; border-radius: 8px; }
+.portfolio-home #education { background: linear-gradient(135deg,#eaf1f5,#edf5ee); }
+.portfolio-home .education { border-radius: 8px; border-left: 3px solid #5e9386; }
+.portfolio-home .edu-year { color: #376b70; }
+.portfolio-home .skill-card { border-radius: 9px; box-shadow: 0 8px 25px #102c4305; border-top: 3px solid #77a799; transition: transform .2s, box-shadow .2s; }
+.portfolio-home .skill-card:nth-child(2n) { border-top-color: #6d90ac; }
+.portfolio-home .skill-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px #102c4310; }
+.portfolio-home .skill-tags li { border: 0; background: #e7f1ec; color: #225d55; }
+.portfolio-home .skill-card:nth-child(2n) .skill-tags li { background: #eaf0f6; color: #355b78; }
+.portfolio-home #projects { background: #eff4f5; }
+.portfolio-home .project-feature-stacked, .portfolio-home .project-small { border-radius: 10px; overflow: hidden; border-color: #d3e0e2; box-shadow: 0 8px 28px #102c4306; }
+.portfolio-home .project-feature-stacked { border-top: 4px solid #b88b4f; }
+.portfolio-home .project-info { padding-top: 36px; }
+.portfolio-home .project-info > p:has(strong) { padding: 18px 20px; background: #f4f1e9; border-left: 3px solid #b88b4f; border-radius: 3px; margin-top: 20px; font-size: 15px; }
+.portfolio-home .timeline { border-color: #bfd4d4; }
+.portfolio-home .timeline-number { background: #1e625e; color: #fff; border-color: #1e625e; }
+.portfolio-home .timeline-body { border-bottom: 1px solid #dce7e3; padding-bottom: 28px; }
+.portfolio-home .timeline-item { padding-bottom: 38px; }
+.portfolio-home #leadership { background: #f3f5ef; }
+.portfolio-home .engagement-card { border-radius: 8px; }
+.portfolio-home .research-banner { background: radial-gradient(ellipse at 100% 0,#245c65,transparent 65%),#102c43; }
+.research-contributions { border-top: 1px solid #ffffff26; margin-top: 60px; padding-top: 35px; }
+.contribution-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px; margin-top: 24px; }
+.contribution-grid article { padding: 24px; border: 1px solid #ffffff26; border-radius: 6px; background: #ffffff05; }
+.contribution-grid span { color: #afc9c4; font-size: 11px; letter-spacing: 1px; }
+.contribution-grid h3 { font-size: 22px; font-weight: 500; margin: 12px 0; color: #fff; }
+.contribution-grid p { font-size: 15px; color: #d2e0df; line-height: 1.75; }
+.portfolio-home .contact-box { border-top-color: #b9d0c7; }
+@media (max-width: 1236px) { .portfolio-home .hero::before { left: -28px; right: -28px; } }
+@media (max-width: 900px) {
+  .portfolio-home .nav-links { padding: 12px 22px; top: 82px; box-shadow: 0 12px 24px #102c430a; }
+  .portfolio-home .nav-links a { padding: 10px 14px; }
+  .portfolio-home .hero { gap: 28px; }
+  .portfolio-home .hero-copy { max-width: 660px; }
+  .portfolio-home .hero-visual { max-width: 540px; width: 100%; margin: auto; min-height: 470px; }
+  .recognition-grid { grid-template-columns: 1fr; }
+  .recognition-card { border-right: 0; border-bottom: 1px solid #dce7e3; }
+  .contribution-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 600px) {
+  .portfolio-home .hero { padding-top: 32px; }
+  .portfolio-home .hero::before { left: -18px; right: -18px; }
+  .achievement-badge { font-size: 12px; padding: 11px 12px; }
+  .portfolio-home .hero h1 { font-size: clamp(60px,19vw,80px); }
+  .portfolio-home .hero-lead { font-size: 17px; }
+  .portfolio-home .hero-visual { min-height: 420px; }
+  .portfolio-home .hero-frame { max-width: 76%; }
+  .portfolio-home .hero-frame img { min-width: 0; width: 100%; }
+  .hero-credential { left: 5%; right: 0; bottom: 0; padding: 16px; }
+  .hero-credential p { font-size: 18px; }
+  .recognition-grid { margin-bottom: 40px; }
+  .portfolio-home .intro-strip .statement { font-size: 20px; }
+  .portfolio-home .project-info > p:has(strong) { padding: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .portfolio-home *, .portfolio-home *::before { scroll-behavior: auto; transition: none; } }
+.portfolio-home { overflow-x: clip; }

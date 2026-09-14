@@ -19,3 +19,22 @@ if (menuToggle && navigation) {
     }
   });
 }
+
+// Keep navigation orientation clear as the reader moves through the homepage.
+const sectionLinks = [...document.querySelectorAll('.portfolio-home .nav-links a[href^="#"]')];
+if (sectionLinks.length) {
+  const targets = sectionLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  let scheduled = false;
+  const markCurrentSection = () => {
+    let current = targets[0];
+    for (const target of targets) if (target.getBoundingClientRect().top <= 150) current = target;
+    for (const link of sectionLinks) {
+      if (link.hash === '#' + current.id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+    scheduled = false;
+  };
+  addEventListener('scroll', () => { if (!scheduled) { scheduled = true; requestAnimationFrame(markCurrentSection); } }, { passive: true });
+  addEventListener('resize', markCurrentSection);
+  markCurrentSection();
+}
